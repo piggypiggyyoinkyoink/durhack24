@@ -14,3 +14,16 @@
 .SubmitButton{
     text-align: center;
 }
+#logo{
+    height: 70px;
+    width:70px;
+
+}
+p.name{
+    font-family: "Karla", sans-serif;
+    font-size:30px;
+    margin-top: 10px;
+}
+div.container2:hover{
+    cursor: pointer;
+}

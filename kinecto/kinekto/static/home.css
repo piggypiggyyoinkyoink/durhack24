@@ -62,3 +62,17 @@ h1.title{
 #logInButton{
     margin-left:70%;
 }
+
+#logo{
+    height: 70px;
+    width:70px;
+
+}
+p.name{
+    font-family: "Karla", sans-serif;
+    font-size:30px;
+    margin-top: 10px;
+}
+div.container2:hover{
+    cursor: pointer;
+}
