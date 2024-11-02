@@ -22,5 +22,6 @@ def search(request):
     template = loader.get_template("search.html")
     context = {}
     return HttpResponse(template.render(context, request))
+
 def about(request):
     return render(request, 'about.html')

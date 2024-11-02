@@ -1,0 +1,14 @@
+div.content{
+    width:30%
+    ;
+    padding:20px;
+    margin:auto;
+    margin-top:10%;
+}
+div.button{
+    text-align:center;
+    margin-top:1.5%;
+}
+div.form-group{
+    margin-bottom:9px;
+}
