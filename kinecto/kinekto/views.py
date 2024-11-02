@@ -8,7 +8,7 @@ from django.urls import reverse
 import datetime, random
 from django.contrib.auth import hashers
 from django.db.models import Q
-from icecream import ic
+#from icecream import ic
 from django.contrib.auth import update_session_auth_hash, login
 # Create your views here.
 
@@ -22,5 +22,11 @@ def search(request):
     template = loader.get_template("search.html")
     context = {}
     return HttpResponse(template.render(context, request))
+
+def signUp(request):
+    template = loader.get_template("signUp.html")
+    context = {}
+    return HttpResponse(template.render(context, request))
+
 def about(request):
     return render(request, 'about.html')

@@ -1,0 +1,16 @@
+#searchContainer{
+    width:60%;
+}
+
+#SignUpContainer{
+    width:30%;
+    margin: auto;
+}
+
+.mb-3{
+    margin-top: 2%;
+}
+
+.SubmitButton{
+    text-align: center;
+}
