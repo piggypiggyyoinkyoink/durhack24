@@ -21,37 +21,40 @@
     </div>
 </nav>
 <div class="container" id = "SignUpContainer">
+    <form action = "/signupdo" method = "post">
+        {%csrf_token%}
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="emailInput" placeholder="name@example.com">
+        <input type="email" class="form-control" id="emailInput" placeholder="name@example.com" name = "email">
     </div>
     <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="inputPassword1">
+        <input type="password" class="form-control" id="inputPassword1" name = "password">
     </div>
     <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label">Re-enter Password</label>
-        <input type="password" class="form-control" id="inputPassword2">
+        <input type="password" class="form-control" id="inputPassword2" name = "confirmPassword">
     </div>
     <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label">First Name</label>
-        <input class="form-control" id="exampleFormControlTextarea1"></input>
+        <input class="form-control" id="exampleFormControlTextarea1" name = "fname"></input>
     </div>
     <div class="mb-3">
         <label for="exampleFormControlTextarea2" class="form-label">Last Name</label>
-        <input class="form-control" id="exampleFormControlTextarea2"></input>
+        <input class="form-control" id="exampleFormControlTextarea2" name = "lname"></input>
     </div>
     <div class="mb-3">
         <label for="exampleFormPronouns" class="form-label">Pronouns</label>
-        <input class="form-control" id="exampleFormPronouns"></input>
+        <input class="form-control" id="exampleFormPronouns" name = "pro"></input>
     </div>
     <div class="mb-3">
         <label for="exampleFormBio" class="form-label">Bio</label>
-        <textarea class="form-control" id="exampleFormBio" rows = "3"></textarea>
+        <textarea class="form-control" id="exampleFormBio" rows = "3" name = "bio"></textarea>
     </div>
     <div class = "SubmitButton">
         <button type = "submit" class = "btn btn-primary">Submit</button>
     </div>
+    </form>
     </div>
     </body>
 </html>
