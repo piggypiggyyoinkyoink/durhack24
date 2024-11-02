@@ -58,3 +58,7 @@ h1.title{
     font-family: "Karla", sans-serif;
     font-weight:bold;
 }
+
+#logInButton{
+    margin-left:70%;
+}
