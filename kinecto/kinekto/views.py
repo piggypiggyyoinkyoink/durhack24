@@ -23,10 +23,13 @@ def search(request):
     context = {}
     return HttpResponse(template.render(context, request))
 
+<<<<<<< HEAD
 def signUp(request):
     template = loader.get_template("signUp.html")
     context = {}
     return HttpResponse(template.render(context, request))
 
+=======
+>>>>>>> a8ab155c409880cace94b020cbba8ac2369d283e
 def about(request):
     return render(request, 'about.html')
