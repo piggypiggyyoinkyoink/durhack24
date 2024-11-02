@@ -31,3 +31,14 @@ nav{
     box-shadow: 0px 0px 30px 15px rgb(190, 233, 240);
 
 }
+.karla-std {
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
+
+h1.title{
+    font-family: "Karla", sans-serif;
+    font-weight:bold;
+}
