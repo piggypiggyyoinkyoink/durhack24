@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
-from django.contrib.auth import models
+from django.contrib.auth import models, authenticate
 from django.contrib.auth.models import User as Auth_User
 from .models import *
 from django.urls import reverse
@@ -49,5 +49,21 @@ def signUpProcessing(request):
             return redirect("/signup")
 
 
-def about(request):
-    return render(request, 'about.html')
+def loginPage(request):
+    template = loader.get_template("login.html")
+    context = {}
+    return HttpResponse(template.render(context, request))
+
+def loginProcessing(request):
+    if request.method == 'POST':
+        email = request.POST['email']
+        password = request.POST['password']
+        user = authenticate(username = email, password = password)
+        if user is not None:
+            if hashers.check_password(password, user.password):
+                login(request, user)
+                return redirect('/')
+            else:
+                return redirect("/login")
+        else:
+            return redirect("/login")
