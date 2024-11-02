@@ -3,4 +3,12 @@ body{
 }
 div.info{
     color:white;
+    box-shadow: 0px 0px 40px 20px rgb(0, 255, 47);
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border-radius: 15px;
+    padding:10px;
 }
