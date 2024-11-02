@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
-from django.contrib.auth import models, authenticate
+from django.contrib.auth import models, authenticate, logout
 from django.contrib.auth.models import User as Auth_User
 from .models import *
 from django.urls import reverse
