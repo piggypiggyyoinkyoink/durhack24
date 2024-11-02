@@ -40,7 +40,7 @@ def signUpProcessing(request):
         bio = request.POST["bio"]
         pronouns = request.POST["pro"]
         if password == confirmPassword:
-            user = Auth_User.objects.create_user(username=email, email=email, password=hashers.make_password(password))
+            user = Auth_User.objects.create_user(username=email, email=email, password=password)
             user.first_name = fname
             user.last_name = lname
             user.save()
@@ -62,11 +62,9 @@ def loginProcessing(request):
         password = request.POST['password']
         user = authenticate(username = email, password = password)
         if user is not None:
-            if hashers.check_password(password, user.password):
-                login(request, user)
-                return redirect('/search')
-            else:
-                return redirect("/login")
+            login(request, user)
+            return redirect('/search')
         else:
+            print("AAAAAAA")
             return redirect("/login")
 
