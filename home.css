@@ -13,12 +13,29 @@ div.info{
     
     border-radius: 15px;
     padding:10px;
-    transition: box-shadow 1s ease-in-out;
+    transition: box-shadow 0.5s ease-in-out;
 }
 div.info:hover{
     box-shadow: 0px 0px 50px 30px rgb(255, 255, 0);
 
 }
-div.button, button{
-    margin:auto;
+div.button{
+    margin-top:5%;
+    text-align:center;
+}
+#getstarted{
+    background:rgb(0,0,0);
+    color:white;
+    box-shadow: 0px 0px 20px 10px rgb(33, 214, 242);
+    transition:box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
+    border:none;
+
+}
+#getstarted:hover{
+    box-shadow: 0px 0px 30px 15px rgb(190, 233, 240);
+    transform: scale(1.2)
+}
+nav{
+    box-shadow: 0px 0px 30px 15px rgb(190, 233, 240);
+
 }
