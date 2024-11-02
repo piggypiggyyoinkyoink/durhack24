@@ -1,0 +1,60 @@
+body{
+    background:rgb(0, 0, 0);
+    
+   
+}
+*{
+    font-family:Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    color:black;
+}
+
+html, body{
+    height:100%;
+}
+div.info{
+    color:white;
+    box-shadow: 0px 0px 40px 20px rgb(0, 255, 47);
+    margin-top: 40%;
+    
+    border-radius: 15px;
+    padding:10px;
+    transition: box-shadow 0.5s ease-in-out;
+}
+div.info:hover{
+    box-shadow: 0px 0px 50px 30px rgb(255, 255, 0);
+
+}
+div.button{
+    margin-top:5%;
+    text-align:center;
+}
+#getstarted{
+    background:rgb(0,0,0);
+    color:white;
+    box-shadow: 0px 0px 20px 10px rgb(33, 214, 242);
+    transition:box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
+    border:none;
+
+}
+#getstarted:hover{
+    box-shadow: 0px 0px 30px 15px rgb(190, 233, 240);
+    transform: scale(1.2)
+}
+nav{
+    box-shadow: 0px 0px 30px 15px rgb(190, 233, 240);
+
+}
+.karla-std {
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
+
+h1.title{
+    font-family: "Karla", sans-serif;
+    font-weight:bold;
+}
