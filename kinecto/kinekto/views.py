@@ -5,7 +5,7 @@ from django.contrib.auth import models, authenticate, logout
 from django.contrib.auth.models import User as Auth_User
 from .models import *
 from django.urls import reverse
-import datetime, random
+import datetime, random#, pillow
 from django.contrib.auth import hashers
 from django.db.models import Q
 #from icecream import ic
@@ -14,7 +14,9 @@ from django.contrib.auth import update_session_auth_hash, login
 
 def home(request):
     template = loader.get_template("home.html")
-    context = {}
+    context = {
+
+    }
 
     return HttpResponse(template.render(context, request))
 
@@ -62,8 +64,9 @@ def loginProcessing(request):
         if user is not None:
             if hashers.check_password(password, user.password):
                 login(request, user)
-                return redirect('/')
+                return redirect('/search')
             else:
                 return redirect("/login")
         else:
             return redirect("/login")
+
