@@ -1,7 +1,5 @@
 body{
     background:rgb(0, 0, 0);
-    
-   
 }
 *{
     font-family:Arial, Helvetica, sans-serif;
@@ -68,11 +66,14 @@ h1.title{
     width:70px;
 
 }
+
 p.name{
     font-family: "Karla", sans-serif;
     font-size:30px;
     margin-top: 10px;
+    color: black;
 }
+
 div.container2:hover{
     cursor: pointer;
 }
