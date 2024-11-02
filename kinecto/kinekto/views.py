@@ -65,6 +65,5 @@ def loginProcessing(request):
             login(request, user)
             return redirect('/search')
         else:
-            print("AAAAAAA")
             return redirect("/login")
 
