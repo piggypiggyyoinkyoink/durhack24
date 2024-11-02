@@ -4,7 +4,15 @@
     <link rel = "stylesheet" href="{%static 'login.css'%}">
 </head>
 <body>
-<div class = "content">
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">
+            <img src="" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            Kinekto
+          </a>
+        </div>
+      </nav>
+    <div class = "content">
     <form method = "post" action = "/logindo">
         {% csrf_token %}
         <div class="form-group">
