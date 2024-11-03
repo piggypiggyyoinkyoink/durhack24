@@ -40,3 +40,30 @@ p.name{
 div.container2:hover{
     cursor: pointer;
 }
+input, textarea{
+    box-shadow: 0px 0px 20px 10px #00ff2f;
+
+}
+input:hover, textarea:hover{
+    box-shadow: 0px 0px 25px 15px #00ff2f;
+    transition: box-shadow 0.5s ease-in-out;
+
+}
+#submit{
+    background:rgb(0,0,0);
+    color:white;
+    box-shadow: 0px 0px 20px 10px rgb(33, 214, 242);
+    transition:box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
+    border:none;
+    margin-top:15px;
+
+}
+#submit:hover{
+    box-shadow: 0px 0px 30px 15px rgb(190, 233, 240);
+    transform: scale(1.2)
+}
+nav{
+    box-shadow: 0px 0px 30px 15px rgb(190, 233, 240);
+    margin-bottom:15px;
+
+}

@@ -47,20 +47,24 @@
                 <!--"TITLE" is an website that allows users to find common interests. Just select some tags that describe your interests and we will suggest clubs and societies that may interest you.-->
                 <h1 class = "title">kinekto</h1>
                 <h3>Find your people</h3>
-                <h2>Find your community</h2>
+                <h2 class = "fyc"><i>Find your community</i></h2>
+                
             </div>
-            
+            <br><Br>
+            <div class = "button">
+              <button type="button" onclick= "location.href='/signup';" id = "getstarted" class="btn btn-primary">Get Started</button>
+            </div>
           </div>
-          <div class="col-sm">
+          <div class="col-sm" id = "img">
             <div class = "image">
-
+                <img class = "image" src = "{%static 'homeimg.jpeg'%}">
             </div>
           </div>
         </div>
       </div>
-      <div class = "button">
+      <!--<div class = "button">
         <button type="button" onclick= "location.href='/signup';" id = "getstarted" class="btn btn-primary">Get Started</button>
-      </div>
+      </div>-->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
 </html>
