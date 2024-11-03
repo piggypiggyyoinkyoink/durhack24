@@ -11,7 +11,7 @@ body{
 }
 
 #searchContainer{
-    width:60%;
+    width:100%;
 }
 
 .mb-3{
@@ -30,6 +30,10 @@ p.name{
 }
 div.container2:hover{
     cursor: pointer;
+}
+
+.row{
+    display:flex;
 }
 nav{
     box-shadow: 0px 0px 30px 15px rgb(190, 233, 240);
