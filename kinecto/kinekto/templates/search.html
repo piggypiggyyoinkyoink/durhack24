@@ -42,6 +42,7 @@
           </div>
         </div>
       </div>
+      <div class = "groups" id = "groups">
       <div class="row">
         <div class="col">
           <div class="groupCard">
@@ -55,6 +56,25 @@
             <p>Description of the club</p>
           </div>
         </div>
+        <p class = "test" id = "test">hi</p>
       </div>
+    </div>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script type="text/javascript">
+        document.getElementById("search").addEventListener("change", myScript);
+        function myScript(){
+          var text = document.getElementById("search").value;
+          
+          $.ajax({
+            type: "POST",
+            url: '{{ 'test/' }}',
+            data: { csrfmiddlewaretoken: '{{ csrf_token }}', text: text },
+            success: function callback(response){
+                        console.log(response);
+                        document.getElementById("groups").innerHTML = response;
+                      }
+          });
+        }
+      </script>
     </body>
 </html>

@@ -37,11 +37,11 @@
         {%csrf_token%}
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Name</label>
-        <input type="text" class="form-control" id="nameInput" placeholder="Tennis Society" name = "name" required>
+        <input type="text" class="form-control" name = "title" id="nameInput" placeholder="Tennis Society" name = "name" required>
     </div>
     <div class="mb-3">
         <label for="exampleFormBio" class="form-label">Description</label>
-        <textarea class="form-control" id="exampleFormDesc" rows = "3" placeholder="Tennis is a game for 2 or 4 players, where each side takes it in turns to hit a small ball back where it came from." name = "desc" required></textarea>
+        <textarea class="form-control" name = "description" id="exampleFormDesc" rows = "3" placeholder="Tennis is a game for 2 or 4 players, where each side takes it in turns to hit a small ball back where it came from." name = "desc" required></textarea>
     </div>
     <div class = "SubmitButton">
         <button type = "submit" id = "submit" class = "btn btn-primary">Submit</button>
