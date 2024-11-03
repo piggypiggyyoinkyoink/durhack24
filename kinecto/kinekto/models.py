@@ -16,3 +16,9 @@ class Group(models.Model):
 class GroupUser(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     group = models.ForeignKey(Group, on_delete=models.CASCADE)
+
+class Tag(models.Model):
+    name = models.CharField(max_length=255)
+class GroupTag(models.Model):
+    group = models.ForeignKey(Group, on_delete=models.CASCADE)
+    tag = models.ForeignKey(Tag, on_delete=models.CASCADE)
