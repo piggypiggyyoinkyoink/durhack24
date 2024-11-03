@@ -31,3 +31,8 @@ p.name{
 div.container2:hover{
     cursor: pointer;
 }
+nav{
+    box-shadow: 0px 0px 30px 15px rgb(190, 233, 240);
+    margin-bottom:15px;
+
+}

@@ -1,5 +1,8 @@
 body{
     background:rgb(0, 0, 0);
+    width:100%;
+    overflow-x:hidden;
+    overflow-y:hidden;
 }
 *{
     font-family:Arial, Helvetica, sans-serif;
@@ -26,7 +29,6 @@ div.info:hover{
 
 }
 div.button{
-    margin-top:5%;
     text-align:center;
 }
 #getstarted{
@@ -76,4 +78,20 @@ p.name{
 
 div.container2:hover{
     cursor: pointer;
+}
+img.image{
+    height:100%;
+}
+div.container{
+    margin-right:0;
+    padding-right:0;
+    height:100%;
+
+}
+div.image{
+    margin-left:45px;
+    height:100%;
+}
+#img, div.row{
+    height:100%;
 }
