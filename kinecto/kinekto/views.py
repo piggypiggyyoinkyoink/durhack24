@@ -3,6 +3,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.contrib.auth import models, authenticate, logout
 from django.contrib.auth.models import User as Auth_User
+from django.contrib.auth.models import Group as Auth_Group
 from .models import *
 from django.urls import reverse
 import datetime, random#, pillow
@@ -67,3 +68,34 @@ def loginProcessing(request):
         else:
             return redirect("/login")
 
+def createGroup(request):
+    template = loader.get_template("createGroup.html")
+    context = {}
+    return HttpResponse(template.render(context, request))
+
+def createGroupProcessing(request):
+    if request.method == 'POST':
+        name = request.POST['name']
+        desc = request.POST['desc']
+        print(name,desc)
+        #To be solved
+        user = Auth_Group.objects.create(name=name, desc=desc)
+        user.save()
+        userProfile = Group(name = name, desc = desc)
+        userProfile.save()
+
+
+    return redirect("/creategroup")
+
+def queryTags(request):
+    if request.method == 'POST':
+        print("AAAAAAAAAAAAAAa")
+        tags = request.POST['tags']
+        print(tags)
+    #Performs some db check.
+    #Removes all spaces
+    #Splits list by '#'
+    #Then somehow adds it to CSS webpage
+    template = loader.get_template("search.html")
+    context = {}
+    return HttpResponse(template.render(context, request))

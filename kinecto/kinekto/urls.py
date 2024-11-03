@@ -28,5 +28,6 @@ urlpatterns = [
     path("login", views.loginPage),
     path("logindo", views.loginProcessing),
     path("creategroup",views.createGroup),
-    path("creategroupdo",views.createGroupProcessing)
+    path("creategroupdo",views.createGroupProcessing),
+    path("queryTags",views.queryTags)
 ]

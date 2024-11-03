@@ -18,10 +18,8 @@
             <div class="row">
               <div class="col-sm">
                 <div class = "img">
-                  <img src="{%static 'logo.png'%}" alt="Logo" width="30" height="24" id = "logo" class="d-inline-block align-text-top">
-                    
+                  <img src="{%static 'logo.png'%}" alt="Logo" width="30" height="24" id = "logo" class="d-inline-block align-text-top">         
                 </div>
-                
               </div>
               <div class="col-sm">
                 <div class = "name">
@@ -33,26 +31,106 @@
         </div>
       </nav>
       <div class="container" id = "searchContainer">
-        <div class="mb-3">
-          <input type="text" class="form-control" id="search" placeholder="Add Tags">
+        <ul style = "margin-top:5%;display:inline-flex;flex-wrap: wrap;list-style:none;justify-content: center;padding-left:0%;">
+          <li class = "bubble" style="background-color:rgb(49, 243, 250);">#Humous</li>
+          <li class = "bubble" style="background-color:rgb(29, 221, 102);">#Cloud</li>
+          <li class = "bubble" style="background-color:rgb(252, 244, 84);">#ESports</li>
+          <li class = "bubble" style="background-color:rgb(246, 8, 8);">#Engineering</li>
+          <li class = "bubble" style="background-color:rgb(49, 243, 250);">#Investment</li>
+          <li class = "bubble" style="background-color:rgb(29, 221, 102);">#Finance</li>
+          <li class = "bubble" style="background-color:rgb(252, 244, 84);">#CyberSecurity</li>
+          <li class = "bubble" style="background-color:rgb(246, 8, 8);">#Academic</li>
+          <li class = "bubble" style="background-color:rgb(49, 243, 250);">#South</li>
+          <li class = "bubble" style="background-color:rgb(29, 221, 102);">#Tennis</li>
+          <li class = "bubble" style="background-color:rgb(252, 244, 84);">#CompSci</li>
+          <li class = "bubble" style="background-color:rgb(246, 8, 8);">#Maths</li>
+          <li class = "bubble" style="background-color:rgb(49, 243, 250);">#AI</li>
+          <li class = "bubble" style="background-color:rgb(29, 221, 102);">#JohnSnow</li>
+          <li class = "bubble" style="background-color:rgb(252, 244, 84);">#Dance</li>
+          <li class = "bubble" style="background-color:rgb(246, 8, 8);">#Food</li>
+        </ul>
+        <div class="mb-3" style="margin-top:5%">
+          <input type="text" class="form-control" id="search" placeholder="Add Tags" name = "tags">
           <div class = "button" id = "AddGroupButton">
-            <button type = "button" onclick = "window.location = '/addgroup'" class="btn btn-primary" id = "AddGroup">
+            <button type = "button" onclick = "window.location = '/creategroup'" class="btn btn-primary" id = "AddGroup">
               Add group
             </button>
           </div>
         </div>
+        <button type = "button" onclick = "window.location = '/queryTags'" class="btn btn-primary" id = "Tags" style = "justify-content: center; margin-left: 40%;margin-right: 40%;width: 20%;">
+          Find Groups
+        </button>
       </div>
+      <!--
+      {% for i in len(int(clubs//3))}
+        <div class="row">
+          {% for j in range(3)}
+            <div class="col">
+              <div class="groupCard">
+                <div class="card">
+                  <img src="https://assets.prod.unioncloud-internal.com/group/images/9685/medium/tennis.jpeg" class="card-img-top" alt="Tennis">
+                  <div class="card-body">
+                    <h2>{{x}}</h2>
+                    <div class="card-text" style="color:black">
+                      <p style="color:black">The Tennis society is a friendly and relaxed society</p>
+                      <ul style = "width:100%;display:inline-flex;flex-wrap: wrap;list-style:none;margin:1%;justify-content: center;padding-left:0%;">
+                        <li class = "bubble">#Sport</li>
+                        <li class = "bubble">#South</li>
+                        <li class = "bubble">#Tennis</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      -->
       <div class="row">
         <div class="col">
           <div class="groupCard">
-            <h3>Title</h3>
-            <p>Description of the club</p>
+            <div class="card">
+              <img src="https://assets.prod.unioncloud-internal.com/group/images/9685/medium/tennis.jpeg" class="card-img-top" alt="Tennis">
+              <div class="card-body">
+                <h2>Tennis Society</h2>
+                <div class="card-text" style="color:black">
+                  <p style="color:black">The Tennis society is a friendly and relaxed society</p>
+                  <ul style = "width:100%;display:inline-flex;flex-wrap: wrap;list-style:none;margin:1%;justify-content: center;padding-left:0%;">
+                    <li class = "bubble">#Sport</li>
+                    <li class = "bubble">#South</li>
+                    <li class = "bubble">#Tennis</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col">
           <div class="groupCard">
             <h3>Title</h3>
             <p>Description of the club</p>
+            <ul style = "width:100%;display:inline-flex;flex-wrap: wrap;list-style:none;margin:1%;justify-content: center;padding-left:0%;">
+              <li class = "bubble">#Tag1</li>
+              <li class = "bubble">#Tag2</li>
+              <li class = "bubble">#Tag3</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col">
+          <div class="groupCard">
+            <div class="card">
+              <img src="https://assets.prod.unioncloud-internal.com/group/images/9581/medium/Colour_Logo_with_Writing.JPG" class="card-img-top" alt="Colour logo with writing">
+              <div class="card-body">
+                <h2>Dancesport Team</h2>
+                <div class="card-text" style="color:black">
+                  <p style="color:black">DUDT is a competitive Ballroom and Latin American dance society.</p>
+                  <ul style = "width:100%;display:inline-flex;flex-wrap: wrap;list-style:none;margin:1%;justify-content: center;padding-left:0%;">
+                    <li class = "bubble">#Dance</li>
+                    <li class = "bubble">#Competition</li>
+                    <li class = "bubble">#Ballroom</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

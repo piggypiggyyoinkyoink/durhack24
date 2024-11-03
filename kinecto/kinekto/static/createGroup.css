@@ -67,3 +67,15 @@ nav{
     margin-bottom:15px;
 
 }
+
+#backButton{
+    background-color:black;
+    box-shadow: 0px 0px 20px 10px rgb(161, 161, 255);
+    border:none;
+}
+
+#backButton:hover{
+    box-shadow: 0px 0px 25px 15px rgb(161, 161, 255);
+    transform:scale(1.2);
+    transition:box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
