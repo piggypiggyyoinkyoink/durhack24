@@ -11,7 +11,7 @@ body{
 }
 
 #searchContainer{
-    width:60%;
+    width:100%;
 }
 
 .mb-3{
@@ -30,4 +30,8 @@ p.name{
 }
 div.container2:hover{
     cursor: pointer;
+}
+
+.row{
+    display:flex;
 }
