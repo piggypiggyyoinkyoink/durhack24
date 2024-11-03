@@ -1,7 +1,10 @@
 body{
     background:rgb(0, 0, 0);
 }
-
+html, body{
+    width:100%;
+    overflow-x:hidden;
+}
 *{
     font-family:Arial, Helvetica, sans-serif;
     box-sizing: border-box;

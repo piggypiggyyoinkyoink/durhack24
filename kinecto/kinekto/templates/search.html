@@ -110,12 +110,11 @@
             </div>
           </div>
         </div>
-        <p class = "test" id = "test">hi</p>
       </div>
     </div>
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
       <script type="text/javascript">
-        document.getElementById("search").addEventListener("change", myScript);
+        document.getElementById("search").addEventListener("keypress", myScript);
         function myScript(){
           var text = document.getElementById("search").value;
           

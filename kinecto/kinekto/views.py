@@ -3,7 +3,6 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.contrib.auth import models, authenticate, logout
 from django.contrib.auth.models import User as Auth_User
-from django.contrib.auth.models import Group as Auth_Group
 from .models import *
 from django.urls import reverse
 import datetime, random#, pillow
@@ -83,23 +82,19 @@ def createGroupProcessing(request):
     
 def test(request):
     data = request.POST.get('text')
-    print(data)
     groups = Group.objects.filter(name__icontains = data).values_list()
     response = HttpResponse()
-    print("hello2")
     t = len(groups)
     if t %2 != 0:
         t+=1
+    print(groups)
     for group in groups:
-        print(t)
         if t % 2 == 0 :
             response.write("<div class = 'row'>")
-        print(group)
         response.write("<div class='col'> <div class='groupCard' <h3>" + group[1] + "</h3> <p>" + group[2] + "</p> </div> </div>")
         if t % 2 == 1:
             response.write("</div>")
         t -= 1
     if t %2 == 1:
-        print("yo")
         response.write("<div class = 'col'> </div></div>")
     return response
