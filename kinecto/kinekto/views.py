@@ -75,27 +75,31 @@ def createGroup(request):
 
 def createGroupProcessing(request):
     if request.method == 'POST':
-        name = request.POST['name']
-        desc = request.POST['desc']
-        print(name,desc)
-        #To be solved
-        user = Auth_Group.objects.create(name=name, desc=desc)
-        user.save()
-        userProfile = Group(name = name, desc = desc)
-        userProfile.save()
-
-
-    return redirect("/creategroup")
-
-def queryTags(request):
-    if request.method == 'POST':
-        print("AAAAAAAAAAAAAAa")
-        tags = request.POST['tags']
-        print(tags)
-    #Performs some db check.
-    #Removes all spaces
-    #Splits list by '#'
-    #Then somehow adds it to CSS webpage
-    template = loader.get_template("search.html")
-    context = {}
-    return HttpResponse(template.render(context, request))
+        title = request.POST['title']
+        description = request.POST['description']
+        group = Group(name = title, description = description)
+        group.save()
+        return redirect('/search')
+import json
+def test(request):
+    data = request.POST.get('text')
+    print(data)
+    groups = Group.objects.filter(name__icontains = data).values_list()
+    response = HttpResponse()
+    print("hello2")
+    t = len(groups)
+    if t %2 != 0:
+        t+=1
+    for group in groups:
+        print(t)
+        if t % 2 == 0 :
+            response.write("<div class = 'row'>")
+        print(group)
+        response.write("<div class='col'> <div class='groupCard' <h3>" + group[1] + "</h3> <p>" + group[2] + "</p> </div> </div>")
+        if t % 2 == 1:
+            response.write("</div>")
+        t -= 1
+    if t %2 == 1:
+        print("yo")
+        response.write("<div class = 'col'> </div></div>")
+    return response

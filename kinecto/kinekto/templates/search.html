@@ -61,30 +61,7 @@
           Find Groups
         </button>
       </div>
-      <!--
-      {% for i in len(int(clubs//3))}
-        <div class="row">
-          {% for j in range(3)}
-            <div class="col">
-              <div class="groupCard">
-                <div class="card">
-                  <img src="https://assets.prod.unioncloud-internal.com/group/images/9685/medium/tennis.jpeg" class="card-img-top" alt="Tennis">
-                  <div class="card-body">
-                    <h2>{{x}}</h2>
-                    <div class="card-text" style="color:black">
-                      <p style="color:black">The Tennis society is a friendly and relaxed society</p>
-                      <ul style = "width:100%;display:inline-flex;flex-wrap: wrap;list-style:none;margin:1%;justify-content: center;padding-left:0%;">
-                        <li class = "bubble">#Sport</li>
-                        <li class = "bubble">#South</li>
-                        <li class = "bubble">#Tennis</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div>
-      -->
+      <div class = "groups" id = "groups">
       <div class="row">
         <div class="col">
           <div class="groupCard">
@@ -133,6 +110,25 @@
             </div>
           </div>
         </div>
+        <p class = "test" id = "test">hi</p>
       </div>
+    </div>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script type="text/javascript">
+        document.getElementById("search").addEventListener("change", myScript);
+        function myScript(){
+          var text = document.getElementById("search").value;
+          
+          $.ajax({
+            type: "POST",
+            url: '{{ 'test/' }}',
+            data: { csrfmiddlewaretoken: '{{ csrf_token }}', text: text },
+            success: function callback(response){
+                        console.log(response);
+                        document.getElementById("groups").innerHTML = response;
+                      }
+          });
+        }
+      </script>
     </body>
 </html>
