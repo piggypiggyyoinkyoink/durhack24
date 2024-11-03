@@ -79,7 +79,7 @@ def createGroupProcessing(request):
         group = Group(name = title, description = description)
         group.save()
         return redirect('/search')
-import json
+    
 def test(request):
     data = request.POST.get('text')
     print(data)
