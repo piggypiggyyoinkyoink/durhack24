@@ -14,23 +14,32 @@
     <body>
       <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-            <div class="container2" onclick = "window.location='/';">
-                <div class="row">
-                  <div class="col-sm">
-                    <div class = "img">
-                      <img src="{%static 'logo.png'%}" alt="Logo" width="30" height="24" id = "logo" class="d-inline-block align-text-top">
-                        
-                    </div>
+          <div class="container1" onclick = "window.location='/';">
+            <div class="row">
+              <div class="col-sm">
+                <div class = "img">
+                  <img src="{%static 'logo.png'%}" alt="Logo" width="30" height="24" id = "logo" class="d-inline-block align-text-top">
                     
-                  </div>
-                  <div class="col-sm">
-                    <div class = "name">
-                        <p class = "name">Kinekto</p>
-                    </div>
-                  </div>
+                </div>
+                
+              </div>
+              <div class="col-sm">
+                <div class = "name">
+                    <p class = "name">Kinekto</p>
                 </div>
               </div>
-    </div>
+            </div>
+          </div>
+          <!--
+          <a class="navbar-brand" href="/">
+            <img src="{%static 'logo.png'%}" alt="Logo" width="30" height="24" id = "logo" class="d-inline-block align-text-top">
+            <p class = "name">Kinekto</p>
+          </a>-->
+          <button type = "button" onclick = "window.location = '/search'" class="btn btn-primary" id = "backButton">
+            Back
+          </button>
+        </div>
+      </div>
 </nav>
 <div class="container" id = "createGroupContainer">
     <form action = "/creategroupdo" method = "post">

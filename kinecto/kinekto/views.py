@@ -3,6 +3,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.contrib.auth import models, authenticate, logout
 from django.contrib.auth.models import User as Auth_User
+from django.contrib.auth.models import Group as Auth_Group
 from .models import *
 from django.urls import reverse
 import datetime, random#, pillow
