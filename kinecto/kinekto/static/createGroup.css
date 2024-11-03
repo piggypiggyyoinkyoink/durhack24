@@ -11,11 +11,20 @@ body{
 }
 
 #searchContainer{
-    width:100%;
+    width:60%;
+}
+
+#createGroupContainer{
+    width:30%;
+    margin: auto;
 }
 
 .mb-3{
-    margin-top: 30%;
+    margin-top: 2%;
+}
+
+.SubmitButton{
+    text-align: center;
 }
 #logo{
     height: 70px;
@@ -31,64 +40,30 @@ p.name{
 div.container2:hover{
     cursor: pointer;
 }
-
-.row{
-    display:flex;
-}
-
-#searchContainer{
-    width:70%;
-}
-
-#search{
-    width:90%;
-    margin-right: 1%;
+input, textarea{
     box-shadow: 0px 0px 20px 10px #00ff2f;
+
 }
+input:hover, textarea:hover{
+    box-shadow: 0px 0px 25px 15px #00ff2f;
+    transition: box-shadow 0.5s ease-in-out;
 
-
-#AddGroupButton{
-    background-color: none;
-    width:10%;
-    margin-top:15px;
-    height:100%;
 }
-
-#AddGroup{
-    height:100%;
+#submit{
     background:rgb(0,0,0);
     color:white;
     box-shadow: 0px 0px 20px 10px rgb(33, 214, 242);
     transition:box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
     border:none;
+    margin-top:15px;
+
+}
+#submit:hover{
+    box-shadow: 0px 0px 30px 15px rgb(190, 233, 240);
+    transform: scale(1.2)
 }
 nav{
     box-shadow: 0px 0px 30px 15px rgb(190, 233, 240);
     margin-bottom:15px;
 
-}
-
-.mb-3{
-    display:flex;
-}
-
-.row{
-    margin-top: 4%;
-}
-
-.groupCard{
-    text-align: center;
-    background-color: blue;
-    width:80%;
-    margin:auto
-}
-
-#search:hover{
-    box-shadow: 0px 0px 25px 15px #00ff2f;
-    transition: box-shadow 0.5s ease-in-out;
-
-}
-#AddGroup:hover{
-    box-shadow: 0px 0px 30px 15px rgb(190, 233, 240);
-    transform: scale(1.2)
 }

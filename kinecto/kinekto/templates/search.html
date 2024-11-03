@@ -34,13 +34,25 @@
       </nav>
       <div class="container" id = "searchContainer">
         <div class="mb-3">
-          <div class = "row">
-            <input type="text" class="form-control" id="search" placeholder="Add Tags">
-            <div class = "button">
-              <button type = "button" onclick = "window.location = '/login'" class="btn btn-primary" id = "AddGroupButton">
-                Add group
-              </button>
-            </div>
+          <input type="text" class="form-control" id="search" placeholder="Add Tags">
+          <div class = "button" id = "AddGroupButton">
+            <button type = "button" onclick = "window.location = '/addgroup'" class="btn btn-primary" id = "AddGroup">
+              Add group
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="groupCard">
+            <h3>Title</h3>
+            <p>Description of the club</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="groupCard">
+            <h3>Title</h3>
+            <p>Description of the club</p>
           </div>
         </div>
       </div>

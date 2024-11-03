@@ -32,36 +32,16 @@
               </div>
     </div>
 </nav>
-<div class="container" id = "SignUpContainer">
-    <form action = "/signupdo" method = "post">
+<div class="container" id = "createGroupContainer">
+    <form action = "/creategroupdo" method = "post">
         {%csrf_token%}
     <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="emailInput" placeholder="name@example.com" name = "email" required>
+        <label for="exampleFormControlInput1" class="form-label">Name</label>
+        <input type="text" class="form-control" id="nameInput" placeholder="Tennis Society" name = "name" required>
     </div>
     <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="inputPassword1" placeholder="password123" name = "password" required>
-    </div>
-    <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Re-enter Password</label>
-        <input type="password" class="form-control" id="inputPassword2" placeholder="password123" name = "confirmPassword" required>
-    </div>
-    <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">First Name</label>
-        <input class="form-control" id="exampleFormControlTextarea1" placeholder="John" name = "fname" required>
-    </div>
-    <div class="mb-3">
-        <label for="exampleFormControlTextarea2" class="form-label">Last Name</label>
-        <input class="form-control" id="exampleFormControlTextarea2" placeholder="Doe" name = "lname" required>
-    </div>
-    <div class="mb-3">
-        <label for="exampleFormPronouns" class="form-label">Pronouns</label>
-        <input class="form-control" id="exampleFormPronouns" placeholder="He/Him" name = "pro" required>
-    </div>
-    <div class="mb-3">
-        <label for="exampleFormBio" class="form-label">Bio</label>
-        <textarea class="form-control" id="exampleFormBio" rows = "3" placeholder="A man of many mysteries" name = "bio" required></textarea>
+        <label for="exampleFormBio" class="form-label">Description</label>
+        <textarea class="form-control" id="exampleFormDesc" rows = "3" placeholder="Tennis is a game for 2 or 4 players, where each side takes it in turns to hit a small ball back where it came from." name = "desc" required></textarea>
     </div>
     <div class = "SubmitButton">
         <button type = "submit" id = "submit" class = "btn btn-primary">Submit</button>
